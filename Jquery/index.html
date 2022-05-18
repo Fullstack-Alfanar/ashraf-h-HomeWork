@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+   
+    <label>first number</label>
+    <input type="text" id="firsts">
+    <br>
+    <label>second number</label>
+    <input type="text" id="second">
+    <br>
+    <button id="btn">fill list</button>
+  <label for="" id="sel"></label>
+
+
+<script src="/jquery-3.6.0.js"></script>
+<script>
+ let firsts = document.getElementById("firsts")
+ let second = document.getElementById("second")
+
+  $(document).ready(function(){
+    $("#btn").click(function(){
+    
+       for(firsts.value;firsts.value<second.value ;firsts.value++){
+      let s=document.createElement("div")
+      s.textContent=firsts.value
+     $("#sel").append(s)
+    }
+    
+    });
+  });
+</script>
+
+</body>
+</html>
